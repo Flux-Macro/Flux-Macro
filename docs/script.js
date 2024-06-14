@@ -20,7 +20,7 @@ window.addEventListener("load",()=>{
 });
 
 $(window).scroll(function() {
-    if(!$(this).scrollTop() == 0) {
+    if($(this).scrollTop() >= 100) {
         $("nav")[0].classList.add("nav_active");
     } else {
         $("nav")[0].classList.remove("nav_active");
