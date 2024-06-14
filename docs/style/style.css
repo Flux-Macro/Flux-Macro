@@ -143,7 +143,7 @@ header #logo {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 99;
-  filter: drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
 }
 
 #section1 {
@@ -200,5 +200,35 @@ header #logo {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 99;
-  filter: drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8.5vmin;
+  width: 100dvw;
+  z-index: 999;
+  transition: 0.35s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-bottom: 1px solid #2a2a2a;
+  border-width: 0px;
+}
+nav #nav_logo {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/flux_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+}
+
+.nav_active {
+  background: #141414;
 }/*# sourceMappingURL=style.css.map */

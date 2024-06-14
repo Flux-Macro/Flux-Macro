@@ -18,3 +18,11 @@ window.addEventListener("load",()=>{
     //     document.write("<h1>This device is unsupported</h1>")
     // }
 });
+
+$(window).scroll(function() {
+    if(!$(this).scrollTop() == 0) {
+        $("nav")[0].classList.add("nav_active");
+    } else {
+        $("nav")[0].classList.remove("nav_active");
+    }
+});
