@@ -1,1 +1,239 @@
-$bg1: #fff;
+$bg1:#191919;
+$bg2:#232323;
+$bg3:#121212;
+$bg4:#272727;
+$bg5:#2e2e2e;
+$txt1:#f3f3f3;
+$txt2:#d7d7d7;
+$txt3:#c2c2c2;
+
+$active:#589ccb;
+$active_outline: 1px solid #2f6185;
+
+$outline: 1px solid #2a2a2a;
+$g-pad: 5vmin;
+$g-trans: .35s;
+$g-bordrad: 1.5vmin ;
+$g-glow: drop-shadow(0,0,1vmin,#ffffff75);
+
+@import url('https://fonts.cdnfonts.com/css/instrument-sans');
+
+html *{
+    margin:0;
+    padding:0;
+    position:relative;
+    box-sizing:border-box;
+    word-wrap: break-word;
+    text-wrap: wrap;
+    font-weight: 400;
+    font-family: 'Instrument Sans', sans-serif;
+    color: $txt1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &::selection{background: $active; color: $bg3;}
+}
+$thumbBG: $bg2;
+$scrollbarBG: bg1;
+body { 
+    height: 100%; 
+    width: 100dvw; 
+    background: $bg2;
+    overflow-x: hidden;
+}
+
+.contentWrapper {
+    width: 100vmin;
+    height: calc(100% - 5vmin);
+    margin: auto;
+    padding: 5vmin;
+    z-index: 16;
+}
+
+.shade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+}
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-size: cover;
+    background-position: center;
+}  
+
+.text_wrapper {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    position: absolute;
+    width: 50%;
+    left: 0%;
+    height: 100%;
+    top: 0%;
+}
+.right {
+    position: absolute;
+    width: 50%;
+    right: 0%;
+    height: 100%;
+    top: 0%;
+}
+
+//------------------------------------------
+
+header {
+    height: 85vmin;
+    width: 100dvw;
+    // padding: 10vmin;
+    overflow: hidden;
+    border-bottom: $outline;
+    background: repeating-linear-gradient(
+        45deg,
+        $bg3,
+        $bg3 5px,
+        $bg1 5px,
+        $bg1 10px
+    );
+    // background: $bg1;
+    h1 {
+        margin-bottom: 3vmin;
+        color: $txt1;
+        $header-txt-size: 7.5vmin;
+        font-size: $header-txt-size;
+        line-height: calc($header-txt-size - .5vmin);
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 3vmin;
+        color: $txt2;
+        font-size: 2.5vmin;
+        line-height: 3.5vmin;
+        font-weight: lighter;
+    }
+    hr {
+        border: $outline;
+        margin-bottom: 2vmin;
+        width: 100%;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $bg1;
+        border-right: $outline;
+        // backdrop-filter: blur(1vmin);
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        padding: 2vmin;
+        background: $bg2;
+        border-radius: 5vmin;
+        border: $outline;
+        font-size: 1.75vmin;
+        cursor: pointer;
+        transition: .35s;
+        &:hover {
+            transform: translateY(-1vmin);
+            background: $active;
+            border: $active_outline;
+        }
+    }
+    #logo {
+        height: 40vmin;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/flux_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 99;
+        filter: 
+            drop-shadow(0 0 30vmin $active)
+            drop-shadow(0 0 15vmin $active)
+            drop-shadow(0 0 5vmin #589ccb50);
+    }
+}
+#section1 {
+    height: 85vmin;
+    width: 100dvw;
+    // padding: 10vmin;
+    background: #141414;
+    overflow: hidden;
+    border-bottom: $outline;
+    text-align: right;
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: $outline;
+        // backdrop-filter: blur(1vmin);
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $bg1;
+    }
+    h1 {
+        margin-bottom: 3vmin;
+        color: $txt1;
+        width: 100%;
+        $header-txt-size: 7.5vmin;
+        font-size: $header-txt-size;
+        line-height: calc($header-txt-size - .5vmin);
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 3vmin;
+        color: $txt2;
+        width: 100%;
+        font-size: 2.5vmin;
+        line-height: 3.5vmin;
+        font-weight: lighter;
+    }
+    hr {
+        border: $outline;
+        margin-bottom: 2vmin;
+        width: 100%;
+    }
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #whyus_symbol {
+        height: 30vmin;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/whyus_symbol.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 99;
+        filter: 
+            drop-shadow(0 0 30vmin $active)
+            drop-shadow(0 0 15vmin $active)
+            drop-shadow(0 0 5vmin #589ccb50);
+    }
+}

@@ -8,7 +8,60 @@
 </head>
 <body>
     <header>
-        
+        <!-- <div class="contentWrapper"> -->
+            <div class="left" style="padding: 10vmin;">
+                <div class="text_wrapper">
+                    <h1>Bee Swarm Macros Done Right</h1>
+                    <hr>
+                    <p>
+                        We are a team dedicated to bringing high-quality Bee Swarm Simulator 
+                        macros to everyone. Our goal is to create the best multilatform bss 
+                        macro to allow mobile players and desktop players to enjoy the same 
+                        amenities using .NET MAUI.
+                    </p>
+                    <a href="#"><button>Get Started</button></a>
+                </div>
+            </div>
+            <div class="right">
+                <div id="logo"></div>
+            </div>
+        <!-- </div> -->
+        <!-- <div class="shade"></div> -->
+        <!-- <div class="bg" style="background-image: url('./assets/bg/1.png');"></div> -->
     </header>
+    <div id="section1">
+        <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
+                    <path d="M 35 0 L 0 0 0 35" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                </pattern>
+                <pattern id="grid" width="350" height="350" patternUnits="userSpaceOnUse">
+                    <rect width="350" height="350" fill="url(#smallGrid)"/>
+                    <path d="M 350 0 L 0 0 0 350" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        <div class="left">
+            <div id="whyus_symbol"></div>
+        </div>
+        <div class="right" style="padding: 10vmin;">
+            <div class="text_wrapper">
+                <h1>Why Us?</h1>
+                <hr>
+                <p>
+                    With many macros written a variety of languages like Python and 
+                    Autohotkey, it may be hard to see why our product is any better. 
+                    The difference between us, and big macro projects like Natro Macro 
+                    and BSS Macro Py is that our product is written in a faster, 
+                    well-adopted coding language, and is built to be cross-platform. 
+                    Natro can be slow and can only run on Windows due to AutoHotkey's 
+                    limitation, but .NET MAUI allows us to make our product available on 
+                    Mac, Android, and Windows with the same codebase.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
