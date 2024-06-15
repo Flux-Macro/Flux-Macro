@@ -142,84 +142,46 @@ nav .selected {
 }
 
 header {
-  height: 85vmin;
-  width: 100dvw;
+  height: 50vmin;
+  background: #191919;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-bottom: 1px solid #2a2a2a;
-  background: repeating-linear-gradient(45deg, #121212, #121212 5px, #191919 5px, #191919 10px);
+  gap: 1vmin;
+}
+header svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 header h1 {
-  margin-bottom: 3vmin;
-  color: #f3f3f3;
-  font-size: 7.5vmin;
-  line-height: 7vmin;
-  font-weight: bold;
-}
-header p {
-  margin-bottom: 3vmin;
-  color: #d7d7d7;
-  font-size: 2.5vmin;
-  line-height: 3.5vmin;
-  font-weight: lighter;
-}
-header hr {
-  border: 1px solid #2a2a2a;
-  margin-bottom: 2vmin;
-  width: 100%;
-}
-header .left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #191919;
-  border-right: 1px solid #2a2a2a;
-}
-header .right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header a {
-  width: 100%;
-}
-header button {
-  width: 100%;
-  padding: 2vmin;
-  background: #232323;
-  border-radius: 5vmin;
-  border: 1px solid #2a2a2a;
-  font-size: 1.75vmin;
-  cursor: pointer;
-  transition: 0.35s;
-}
-header button:hover {
-  transform: translateY(-1vmin);
-  background: #589ccb;
-  border: 1px solid #2f6185;
-  filter: drop-shadow(0 0 30vmin rgba(88, 156, 203, 0.3137254902)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.1882352941));
-}
-header #logo {
-  height: 40vmin;
-  aspect-ratio: 1/1;
-  background-image: url("../assets/flux_logo.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 99;
-  transition: 0.35s;
+  font-size: 10vmin;
+  z-index: 20;
   filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
-}
-header #logo:hover {
-  transform: scale(110%) rotate(-5deg);
-  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.8352941176));
 }
 
 #section1 {
-  height: 85vmin;
+  height: 65vmin;
   width: 100dvw;
-  background: #141414;
   overflow: hidden;
   border-bottom: 1px solid #2a2a2a;
   text-align: right;
+  background: repeating-linear-gradient(45deg, #121212, #121212 5px, #191919 5px, #191919 10px);
+}
+#section1 h1 {
+  line-height: 1vmin;
+  width: 100%;
+}
+#section1 h2 {
+  line-height: 5vmin;
+  font-size: 2.35vmin;
+  color: #c2c2c2;
+  width: 100%;
 }
 #section1 .left {
   display: flex;
@@ -233,23 +195,47 @@ header #logo:hover {
   align-items: center;
   background: #191919;
 }
-#section1 svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#section1 p {
+  margin-bottom: 1vmin;
 }
-#section1 #whyus_symbol {
-  height: 30vmin;
+#section1 .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 1vmin;
+}
+#section1 .links .link {
+  height: 5.5vmin;
   aspect-ratio: 1/1;
-  background-image: url("../assets/whyus_symbol.png");
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 99;
+  background-position: center;
   transition: 0.35s;
+}
+#section1 .links .link:hover {
+  transform: scale(110%);
   filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
 }
-#section1 #whyus_symbol:hover {
+#section1 .links #github {
+  background-image: url("../assets/icons/gh.png");
+}
+#section1 .links #youtube {
+  background-image: url("../assets/icons/yt.webp");
+}
+#section1 #m1dnight_pfp {
+  height: 30vmin;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/pfp/m1dnight.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2.5vmin;
+  transition: 0.35s;
+  z-index: 99;
+  filter: drop-shadow(0 0 1.5vmin #2c2a45) drop-shadow(0 0 35vmin rgba(88, 156, 203, 0.4588235294)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.3137254902)) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.2078431373));
+}
+#section1 #m1dnight_pfp:hover {
   transform: scale(110%) rotate(-5deg);
-  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.8352941176));
-}/*# sourceMappingURL=style.css.map */
+  filter: drop-shadow(0 0 1.5vmin #2c2a45) drop-shadow(0 0 35vmin rgba(88, 156, 203, 0.4588235294)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.3137254902)) drop-shadow(0 0 5vmin rgba(88, 155, 203, 0.6274509804));
+}/*# sourceMappingURL=aboutus.css.map */

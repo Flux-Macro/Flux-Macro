@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/flux_icon.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/aboutus.css" />
     <title>Flux - About Us</title>
 </head>
+<nav>
+    <div id="nav_logo"></div>
+    <a href="index.html">Home</a>
+    <a class="selected" href="aboutus.html">About Us</a>
+    <a href="comingsoon.html">Docs</a>
+</nav>
 <body>
-    
+    <header>
+        <h1>About Us</h1>
+        <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
+                    <path d="M 35 0 L 0 0 0 35" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                </pattern>
+                <pattern id="grid" width="350" height="350" patternUnits="userSpaceOnUse">
+                    <rect width="350" height="350" fill="url(#smallGrid)"/>
+                    <path d="M 350 0 L 0 0 0 350" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+    </header>
+    <div id="section1">
+        <div class="left">
+            <div id="m1dnight_pfp"></div>
+        </div>
+        <div class="right" style="padding: 3.5vmin;">
+            <div class="text_wrapper">
+                <h1>M1dnight</h1>
+                <h2>Lead Developer, Website Developer, Creator</h2>
+                <hr>
+                <p>
+                    M1dnight is an experienced developer, with knowledge in C#, Web 
+                    Development, and JS. He is experienced with Node.js and creating 
+                    desktop application and websites. He is also the creator of 
+                    Beansite, and is the founder of this project.
+                    <div class="links">
+                        <a href="https://github.com/M1dnight-ofcl"><div class="link" id="github"></div></a>
+                        <a href="https://youtube.com/@m1dnightdev"><div class="link" id="youtube"></div></a>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

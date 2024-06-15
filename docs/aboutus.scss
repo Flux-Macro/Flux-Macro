@@ -1,0 +1,122 @@
+@import "theme";
+//------------------------------------------
+header {
+    height: 50vmin;
+    background: $bg1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: $outline;
+    gap: 1vmin;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+    }
+    h1 {
+        font-size: 10vmin;
+        z-index: 20;
+        filter: 
+            drop-shadow(0 0 1.5vmin #ffffff25)
+            drop-shadow(0 0 30vmin #589ccb)
+            drop-shadow(0 0 15vmin #589ccb)
+            drop-shadow(0 0 5vmin #589ccb50);
+    }
+}
+#section1 {
+    height: 65vmin;
+    width: 100dvw;
+    // padding: 10vmin;
+    overflow: hidden;
+    border-bottom: $outline;
+    text-align: right;
+    background: repeating-linear-gradient(
+        45deg,
+        $bg3,
+        $bg3 5px,
+        $bg1 5px,
+        $bg1 10px
+    );
+    h1 {
+        line-height: 1vmin;
+        width: 100%;
+    }
+    h2 {
+        line-height: 5vmin;
+        font-size: 2.35vmin;
+        color: $txt3;
+        width: 100%;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: $outline;
+        // backdrop-filter: blur(1vmin);
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $bg1;
+    }
+    p {
+        margin-bottom: 1vmin;
+    }
+    .links {
+        // padding: 1vmin;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 1vmin;
+        .link {
+            height: 5.5vmin;
+            aspect-ratio: 1 / 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: .35s;
+            &:hover {
+                transform: scale(110%);
+                filter: 
+                    drop-shadow(0 0 1.5vmin #ffffff25)
+                    drop-shadow(0 0 30vmin $active)
+                    drop-shadow(0 0 15vmin $active)
+                    drop-shadow(0 0 5vmin #589ccb50);
+            }
+        }
+        #github { background-image: url("../assets/icons/gh.png"); }
+        #youtube { background-image: url("../assets/icons/yt.webp"); }
+    }
+    #m1dnight_pfp {
+        height: 30vmin;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/pfp/m1dnight.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 2.5vmin;
+        transition: .35s;
+        z-index: 99;
+        filter: 
+            drop-shadow(0 0 1.5vmin #2c2a45)
+            drop-shadow(0 0 35vmin #589ccb75)
+            drop-shadow(0 0 15vmin #589ccb50)
+            drop-shadow(0 0 5vmin #589ccb35);
+        &:hover {
+            transform: 
+            scale(110%)
+            rotate(-5deg);
+            filter: 
+                drop-shadow(0 0 1.5vmin #2c2a45)
+                drop-shadow(0 0 35vmin #589ccb75)
+                drop-shadow(0 0 15vmin #589ccb50)
+                drop-shadow(0 0 5vmin #589bcba0);
+        }
+    }
+}
