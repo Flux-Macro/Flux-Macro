@@ -363,7 +363,7 @@ header #logo:hover {
 }
 
 #section3 {
-  height: 50vmin;
+  height: 60vmin;
   width: 100dvw;
   overflow: hidden;
   border-bottom: 1px solid #2a2a2a;
@@ -416,13 +416,20 @@ header #logo:hover {
 #section3 #downloads_carousel .download h2 {
   width: 100%;
   text-align: left;
-  font-size: 2.65vmin;
+  font-size: 3.5vmin;
 }
 #section3 #downloads_carousel .download p {
   width: 100%;
   text-align: left;
-  font-size: 1.5vmin;
+  font-size: 1.65vmin;
   color: #c2c2c2;
+}
+#section3 #downloads_carousel .download .iconWrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #section3 #downloads_carousel .download .icon {
   width: 85%;

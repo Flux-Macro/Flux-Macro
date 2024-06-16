@@ -214,7 +214,7 @@ header {
     }
 }
 #section3 {
-    height: 50vmin;
+    height: 60vmin;
     width: 100dvw;
     // padding: 10vmin;
     overflow: hidden;
@@ -267,13 +267,20 @@ header {
             h2 {
                 width: 100%;
                 text-align: left;
-                font-size: 2.65vmin;
+                font-size: 3.5vmin;
             }
             p {
                 width: 100%;
                 text-align: left;
-                font-size: 1.5vmin;
+                font-size: 1.65vmin;
                 color: $txt3;
+            }
+            .iconWrapper {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .icon {
                 width: 85%;

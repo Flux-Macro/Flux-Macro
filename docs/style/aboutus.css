@@ -191,6 +191,10 @@ nav .selected {
   filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
 }
 
+.ignore-css {
+  all: unset;
+}
+
 header {
   height: 50vmin;
   background: #191919;
