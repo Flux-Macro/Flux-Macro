@@ -124,7 +124,7 @@ header {
     #whyus_symbol {
         height: 30vmin;
         aspect-ratio: 1 / 1;
-        background-image: url("../assets/whyus_symbol.png");
+        background-image: url("../assets/icons/whyus_symbol.png");
         background-size: contain;
         background-repeat: no-repeat;
         z-index: 99;
@@ -143,6 +143,178 @@ header {
                 drop-shadow(0 0 30vmin $active)
                 drop-shadow(0 0 15vmin $active)
                 drop-shadow(0 0 5vmin #589ccbd5);
+        }
+    }
+}
+#section2 {
+    height: 85vmin;
+    width: 100dvw;
+    // padding: 10vmin;
+    overflow: hidden;
+    border-bottom: $outline;
+    background-image: url("../assets/bg/topography.png");
+    background-size: cover;
+    // background: $bg1;
+    h1 {
+        margin-bottom: 3vmin;
+        color: $txt1;
+        $header-txt-size: 7.5vmin;
+        font-size: $header-txt-size;
+        line-height: calc($header-txt-size - .5vmin);
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 3vmin;
+        color: $txt2;
+        font-size: 2.5vmin;
+        line-height: 3.5vmin;
+        font-weight: lighter;
+    }
+    hr {
+        border: $outline;
+        margin-bottom: 2vmin;
+        width: 100%;
+    }
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $bg1;
+        border-right: $outline;
+        // backdrop-filter: blur(1vmin);
+    }
+    .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #ourgoals_symbol {
+        height: 30vmin;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/icons/ourgoals_symbol.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 99;
+        transition: .35s;
+        filter: 
+            drop-shadow(0 0 1.5vmin #ffffff25)
+            drop-shadow(0 0 30vmin $active)
+            drop-shadow(0 0 15vmin $active)
+            drop-shadow(0 0 5vmin #589ccb50);
+        &:hover {
+            transform: 
+            scale(110%)
+            rotate(-5deg);
+            filter: 
+                drop-shadow(0 0 1.5vmin #ffffff25)
+                drop-shadow(0 0 30vmin $active)
+                drop-shadow(0 0 15vmin $active)
+                drop-shadow(0 0 5vmin #589ccbd5);
+        }
+    }
+}
+#section3 {
+    height: 50vmin;
+    width: 100dvw;
+    // padding: 10vmin;
+    overflow: hidden;
+    border-bottom: $outline;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3.5vmin;
+    background: $bg1;
+    gap: 1vmin;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    h1 {
+        font-size: 7.5vmin;
+        margin: 0;
+    }
+    #downloads_carousel {
+        height: calc(100% - 10vmin);
+        width: 100vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 1vmin;
+        filter: 
+            // drop-shadow(0 0 1.5vmin #ffffff15)
+            drop-shadow(0 0 30vmin #589ccb25)
+            drop-shadow(0 0 15vmin #589ccb25)
+            drop-shadow(0 0 5vmin #589ccb05);
+        .download {
+            height: 100%;
+            aspect-ratio: 2 / 3;
+            background: $bg1;
+            border: $outline;
+            border-radius: 2vmin;
+            transition: .35s;
+            padding: 2vmin;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 1vmin;
+            #source {background-image: url("../assets/icons/gh.png");}
+            h2 {
+                width: 100%;
+                text-align: left;
+                font-size: 2.65vmin;
+            }
+            p {
+                width: 100%;
+                text-align: left;
+                font-size: 1.5vmin;
+                color: $txt3;
+            }
+            .icon {
+                width: 85%;
+                aspect-ratio: 1 / 1;
+                // background: white;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            a {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                padding: .75vmin 0;
+                border-radius: 1vmin;
+                background: $bg2;
+                border: $outline;
+                flex: 1;
+                cursor: pointer;
+                // position: absolute;
+                // bottom: 2vmin;
+                transition: .35s;
+                &:hover {
+                    transform: translateY(-.5vmin);
+                    background: $active;
+                    border: $active_outline;
+                    filter:
+                        drop-shadow(0 0 30vmin #589ccb50)
+                        drop-shadow(0 0 15vmin #589ccb30);
+                }
+            }
+            &:hover {
+                transform: scale(105%);
+                z-index: 156;
+                filter: 
+                    // drop-shadow(0 0 1.5vmin #ffffff15)
+                    drop-shadow(0 0 30vmin #589ccb15)
+                    drop-shadow(0 0 15vmin #589ccb15)
+                    drop-shadow(0 0 5vmin #589ccb00);
+            }
         }
     }
 }

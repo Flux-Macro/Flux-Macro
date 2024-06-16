@@ -14,6 +14,23 @@
     <a class="selected" href="aboutus.html">About Us</a>
     <a href="comingsoon.html">Docs</a>
 </nav>
+
+<div id="loading">
+    <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
+                <path d="M 35 0 L 0 0 0 35" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+            </pattern>
+            <pattern id="grid" width="350" height="350" patternUnits="userSpaceOnUse">
+                <rect width="350" height="350" fill="url(#smallGrid)"/>
+                <path d="M 350 0 L 0 0 0 350" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+    <div id="loading_logo"></div>
+</div>
+
 <body>
     <header>
         <h1>About Us</h1>

@@ -132,6 +132,11 @@ nav #nav_logo {
 }
 nav a {
   text-decoration: none;
+  transition: 0.35s;
+  display: block;
+}
+nav a:hover {
+  transform: scale(115%);
 }
 nav .selected {
   font-weight: bold;
@@ -139,6 +144,51 @@ nav .selected {
 
 .nav_active {
   background: #141414;
+}
+
+@keyframes loadingani {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#loading {
+  position: fixed;
+  height: 100dvh;
+  width: 100dvw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #121212;
+  z-index: 9997;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  pointer-events: auto;
+}
+#loading svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading #loading_logo {
+  height: 30vmin;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/flux_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  transition: 0.35s;
+  animation: 3s infinite loadingani;
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
 }
 
 header {

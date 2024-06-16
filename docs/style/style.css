@@ -132,6 +132,11 @@ nav #nav_logo {
 }
 nav a {
   text-decoration: none;
+  transition: 0.35s;
+  display: block;
+}
+nav a:hover {
+  transform: scale(115%);
 }
 nav .selected {
   font-weight: bold;
@@ -139,6 +144,55 @@ nav .selected {
 
 .nav_active {
   background: #141414;
+}
+
+@keyframes loadingani {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#loading {
+  position: fixed;
+  height: 100dvh;
+  width: 100dvw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #121212;
+  z-index: 9997;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  pointer-events: auto;
+}
+#loading svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading #loading_logo {
+  height: 30vmin;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/flux_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  transition: 0.35s;
+  animation: 3s infinite loadingani;
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
+}
+
+.ignore-css {
+  all: unset;
 }
 
 header {
@@ -242,7 +296,7 @@ header #logo:hover {
 #section1 #whyus_symbol {
   height: 30vmin;
   aspect-ratio: 1/1;
-  background-image: url("../assets/whyus_symbol.png");
+  background-image: url("../assets/icons/whyus_symbol.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 99;
@@ -252,4 +306,152 @@ header #logo:hover {
 #section1 #whyus_symbol:hover {
   transform: scale(110%) rotate(-5deg);
   filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.8352941176));
+}
+
+#section2 {
+  height: 85vmin;
+  width: 100dvw;
+  overflow: hidden;
+  border-bottom: 1px solid #2a2a2a;
+  background-image: url("../assets/bg/topography.png");
+  background-size: cover;
+}
+#section2 h1 {
+  margin-bottom: 3vmin;
+  color: #f3f3f3;
+  font-size: 7.5vmin;
+  line-height: 7vmin;
+  font-weight: bold;
+}
+#section2 p {
+  margin-bottom: 3vmin;
+  color: #d7d7d7;
+  font-size: 2.5vmin;
+  line-height: 3.5vmin;
+  font-weight: lighter;
+}
+#section2 hr {
+  border: 1px solid #2a2a2a;
+  margin-bottom: 2vmin;
+  width: 100%;
+}
+#section2 .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #191919;
+  border-right: 1px solid #2a2a2a;
+}
+#section2 .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section2 #ourgoals_symbol {
+  height: 30vmin;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/icons/ourgoals_symbol.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 99;
+  transition: 0.35s;
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
+}
+#section2 #ourgoals_symbol:hover {
+  transform: scale(110%) rotate(-5deg);
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.8352941176));
+}
+
+#section3 {
+  height: 50vmin;
+  width: 100dvw;
+  overflow: hidden;
+  border-bottom: 1px solid #2a2a2a;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 3.5vmin;
+  background: #191919;
+  gap: 1vmin;
+}
+#section3 svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#section3 h1 {
+  font-size: 7.5vmin;
+  margin: 0;
+}
+#section3 #downloads_carousel {
+  height: calc(100% - 10vmin);
+  width: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1vmin;
+  filter: drop-shadow(0 0 30vmin rgba(88, 156, 203, 0.1450980392)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.1450980392)) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.0196078431));
+}
+#section3 #downloads_carousel .download {
+  height: 100%;
+  aspect-ratio: 2/3;
+  background: #191919;
+  border: 1px solid #2a2a2a;
+  border-radius: 2vmin;
+  transition: 0.35s;
+  padding: 2vmin;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1vmin;
+}
+#section3 #downloads_carousel .download #source {
+  background-image: url("../assets/icons/gh.png");
+}
+#section3 #downloads_carousel .download h2 {
+  width: 100%;
+  text-align: left;
+  font-size: 2.65vmin;
+}
+#section3 #downloads_carousel .download p {
+  width: 100%;
+  text-align: left;
+  font-size: 1.5vmin;
+  color: #c2c2c2;
+}
+#section3 #downloads_carousel .download .icon {
+  width: 85%;
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#section3 #downloads_carousel .download a {
+  width: 100%;
+}
+#section3 #downloads_carousel .download button {
+  width: 100%;
+  padding: 0.75vmin 0;
+  border-radius: 1vmin;
+  background: #232323;
+  border: 1px solid #2a2a2a;
+  flex: 1;
+  cursor: pointer;
+  transition: 0.35s;
+}
+#section3 #downloads_carousel .download button:hover {
+  transform: translateY(-0.5vmin);
+  background: #589ccb;
+  border: 1px solid #2f6185;
+  filter: drop-shadow(0 0 30vmin rgba(88, 156, 203, 0.3137254902)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.1882352941));
+}
+#section3 #downloads_carousel .download:hover {
+  transform: scale(105%);
+  z-index: 156;
+  filter: drop-shadow(0 0 30vmin rgba(88, 156, 203, 0.0823529412)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.0823529412)) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0));
 }/*# sourceMappingURL=style.css.map */

@@ -14,6 +14,21 @@
     <a href="aboutus.html">About Us</a>
     <a href="comingsoon.html">Docs</a>
 </nav>
+<div id="loading">
+    <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
+                <path d="M 35 0 L 0 0 0 35" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+            </pattern>
+            <pattern id="grid" width="350" height="350" patternUnits="userSpaceOnUse">
+                <rect width="350" height="350" fill="url(#smallGrid)"/>
+                <path d="M 350 0 L 0 0 0 350" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+    <div id="loading_logo"></div>
+</div>
 <body>
     <header>
         <!-- <div class="contentWrapper"> -->
@@ -67,6 +82,54 @@
                     limitation, but .NET MAUI allows us to make our product available on 
                     Mac, Android, and Windows with the same codebase.
                 </p>
+            </div>
+        </div>
+    </div>
+    <div id="section2">
+        <div class="left" style="padding: 10vmin;">
+            <div class="text_wrapper">
+                <h1>Our Goals</h1>
+                <hr>
+                <p>
+                    We strive to make out product the best it can be. Out goals for this 
+                    project include improving upon features in Natro Macro, such as better 
+                    movement correction, better/more themes, and improved support. We would 
+                    also liek to implement some features that are not present in Natro that 
+                    have been requested or would be great additions, such as profiles, 
+                    plugins, cross-platform syncing, easy custom pattern ussage, and so 
+                    much more. We want our product to the best it can be, and to be the 
+                    go-to option for Bee Swarm Simulator Macroing
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <div id="ourgoals_symbol"></div>
+        </div>
+    </div>
+    <div id="section3">
+        <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
+                    <path d="M 35 0 L 0 0 0 35" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                </pattern>
+                <pattern id="grid" width="350" height="350" patternUnits="userSpaceOnUse">
+                    <rect width="350" height="350" fill="url(#smallGrid)"/>
+                    <path d="M 350 0 L 0 0 0 350" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+        <h1>Download Today</h1>
+        <div id="downloads_carousel">
+            <div class="download">
+                <div class="icon" id="source"></div>
+                <h2>Source Code</h2>
+                <p>
+                    Latest code, but you have to build it yourself and it may have bugs
+                </p>
+                <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/Flux-Macro/Flux-Macro/tree/main">
+                    <button>Download</button>
+                </a>
             </div>
         </div>
     </div>

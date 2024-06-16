@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <link rel="icon" type="image/x-icon" href="assets/flux_icon.png">
+    <link rel="stylesheet" href="style/theme.css"/>
 </head>
 <style>
-@import url('https://fonts.cdnfonts.com/css/instrument-sans');
-html * {
-    font-family: 'Instrument Sans', sans-serif;
-    color: #fff;
-}
 button {
     width: 100vmin;
     padding: 2vmin;
@@ -23,87 +19,20 @@ button {
     transition: .35s;
     z-index: 95;
 }
-
 button:hover {
     transform: translateY(-1vmin);
     background: #589ccb;
     border: 1px solid #2f6185;
 }
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 8.5vmin;
-    width: 100dvw;
-    z-index: 999;
-    transition: .35s;
-    padding-right: 5vmin;
-    font-size: 2.35vmin;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    gap: 3vmin;
-}
-#nav_logo {
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    background-image: url("../assets/flux_logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: -10px;
-    transform: translateY(-50%);
-}
-nav a {
-    text-decoration: none;
-}
-nav .selected {
-    font-weight: bold;
-}
-.nav_active {
-    background: #141414;
-}
 </style>
-<nav>
+<nav style="padding-right: .65vmin !important;">
     <div id="nav_logo"></div>
     <a href="index.html">Home</a>
     <a href="aboutus.html">About Us</a>
     <a style="margin-right: 3vmin;" href="comingsoon.html">Docs</a>
 </nav>
-<body style="
-    background: #191919;
-    height: 100dvh;
-    width: 100dvw;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;">
-    <div style="
-        height: 100dvh;
-        width: 100dvw;
-        position: fixed;
-        top: 0%;
-        left: 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 8vmin;">
-        <h1 style="
-            z-index: 99;
-            filter: 
-                drop-shadow(0 0 1.5vmin #ffffff25)
-                drop-shadow(0 0 30vmin #589ccb)
-                drop-shadow(0 0 15vmin #589ccb)
-                drop-shadow(0 0 5vmin #589ccb50);">
-            Coming Soon</h1>
-            <button onclick="history.back()">Go Back</button>
-    </div>
+
+<div id="loading">
     <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
@@ -116,5 +45,55 @@ nav .selected {
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)" />
     </svg>
+    <div id="loading_logo"></div>
+</div>
+
+<body style="
+    background: #191919 !important;
+    height: 100dvh !important;
+    width: 100dvw !important;
+    position: fixed !important;
+    top: 0% !important;
+    left: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;">
+    <div class="ignore-css" style="
+        height: 100dvh !important;
+        width: 100dvw !important;
+        position: fixed !important;
+        top: 0% !important;
+        left: 0% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column !important;
+        font-size: 8vmin !important;">
+        <h1 class="ignore-css" style="
+            font-size: 15vmin !important;
+            z-index: 205 !important;
+            padding-bottom: 5vmin;
+            filter: 
+                drop-shadow(0 0 1.5vmin #ffffff25)
+                drop-shadow(0 0 30vmin #589ccb)
+                drop-shadow(0 0 15vmin #589ccb)
+                drop-shadow(0 0 5vmin #589ccb50) !important;">
+            Coming Soon</h1>
+            <button onclick="history.back()">Go Back</button>
+    </div>
+    <svg class="ignore-css" width="100dvw" height="100dvh" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <pattern id="smallGrid" width="35" height="35" patternUnits="userSpaceOnUse">
+                <path d="M 35 0 L 0 0 0 35" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+            </pattern>
+            <pattern id="grid" width="350" height="350" patternUnits="userSpaceOnUse">
+                <rect width="350" height="350" fill="url(#smallGrid)"/>
+                <path d="M 350 0 L 0 0 0 350" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+            </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+    </svg>
+    <script src="script.js"></script>
 </body>
 </html>
