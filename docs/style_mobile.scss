@@ -1,0 +1,162 @@
+@import "defaultStyle_mobile";
+//------------------------------------------
+header {
+    height: 150vmin;
+    width: 100dvw;
+    background: $bg1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .right {
+        display: none;
+    }
+    h1 {
+        font-size: 12vmin;
+    }
+    button {
+        width: 100%;
+        padding: 3vmin 0;
+        background: $bg2;
+        border: $outline;
+        border-radius: 5vmin;
+        font-size: 3.65vmin;
+        transition: .35s;
+        &:active {
+            background: $active;
+            border: $active_outline;
+            transform: scale(105%);
+        }
+    }
+}
+#section1 {
+    height: 150vmin;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: $outline;
+    overflow: hidden;
+    .left {display: none;}
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+#section2 {
+    height: 150vmin;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: $outline;
+    background-image: url("../assets/bg/topography.png");
+    background-size: cover;
+    .right {display: none;}
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+#section3 {
+    height: auto;
+    width: 100dvw;
+    // padding: 10vmin;
+    overflow: hidden;
+    border-bottom: $outline;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3.5vmin;
+    background: $bg1;
+    gap: 1vmin;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    h1 {
+        font-size: 10vmin;
+        margin: 0;
+    }
+    #downloads_carousel {
+        height: calc(100% - 10vmin);
+        width: 100vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1vmin;
+        filter: 
+            // drop-shadow(0 0 1.5vmin #ffffff15)
+            drop-shadow(0 0 30vmin #589ccb25)
+            drop-shadow(0 0 15vmin #589ccb25)
+            drop-shadow(0 0 5vmin #589ccb05);
+        .download {
+            width: 65vmin;
+            height: 85vmin;
+            // aspect-ratio: 3 / 2;
+            background: $bg1;
+            border: $outline;
+            border-radius: 2vmin;
+            transition: .35s;
+            padding: 2vmin;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 2vmin;
+            #source {background-image: url("../assets/icons/gh.png");}
+            h2 {
+                width: 100%;
+                text-align: left;
+                font-size: 5vmin;
+            }
+            p {
+                width: 100%;
+                text-align: left;
+                font-size: 3.5vmin;
+                color: $txt3;
+            }
+            .iconWrapper {
+                flex: 1;
+                width: 100%;
+                height: 45vmin;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .icon {
+                height: 100%;
+                aspect-ratio: 1 / 1;
+                // background: white;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            a {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+                padding: 1.5vmin 0;
+                border-radius: 1vmin;
+                background: $bg2;
+                border: $outline;
+                flex: 1;
+                font-size: 3.5vmin;
+                cursor: pointer;
+                // position: absolute;
+                // bottom: 2vmin;
+                transition: .35s;
+            }
+        }
+    }
+}

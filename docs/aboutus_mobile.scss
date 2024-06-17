@@ -1,0 +1,92 @@
+@import "defaultStyle_mobile";
+//------------------------------------------
+header {
+    height: 75vmin;
+    background: $bg1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: $outline;
+    gap: 1vmin;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+    }
+    h1 {
+        font-size: 10vmin;
+        z-index: 20;
+        filter: 
+            drop-shadow(0 0 1.5vmin #ffffff25)
+            drop-shadow(0 0 30vmin #589ccb)
+            drop-shadow(0 0 15vmin #589ccb)
+            drop-shadow(0 0 5vmin #589ccb50);
+    }
+}
+#section1 {
+    background: repeating-linear-gradient(
+        45deg,
+        $bg3,
+        $bg3 5px,
+        $bg1 5px,
+        $bg1 10px
+    );
+    .left {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding: 10vmin;
+        padding-bottom: 2.5vmin;
+        align-items: center;
+    }
+    h1 {
+        margin-bottom: 0vmin !important;
+    }
+    h2 {
+        font-size: 4vmin;
+        color: $txt3;
+        margin-bottom: 2vmin !important;
+    }
+    p {
+        margin-bottom: 2vmin !important;
+    }
+    #m1dnight_pfp {
+        height: 30vmin;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/pfp/m1dnight.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 2.5vmin;
+        transition: .35s;
+        z-index: 99;
+        filter: 
+            drop-shadow(0 0 1.5vmin #2c2a45)
+            drop-shadow(0 0 35vmin #589ccb75)
+            drop-shadow(0 0 15vmin #589ccb50)
+            drop-shadow(0 0 5vmin #589ccb35);
+    }
+    .links {
+        // padding: 1vmin;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 2vmin;
+        .link {
+            height: 12.5vmin;
+            aspect-ratio: 1 / 1;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: .35s;
+        }
+        #github { background-image: url("../assets/icons/gh.png"); }
+        #youtube { background-image: url("../assets/icons/yt.webp"); }
+    }
+}

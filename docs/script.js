@@ -1,4 +1,5 @@
-window.addEventListener("load",()=>{
+disableScroll();
+window.onload=()=>{
     const checkres=()=>{
         function gcd (a, b) {return (b == 0) ? a : gcd (b, a%b);}
         var w = screen.width;
@@ -18,11 +19,14 @@ window.addEventListener("load",()=>{
         //     document.write("<h1>This device is unsupported</h1>")
         // }
     }
+    waitForElm("#loading");
     setTimeout(()=>{
         document.getElementById("loading").setAttribute("style","opacity:0;pointer-events: none !important;");
     },500)
+    // document.getElementById("loading").remove();
     checkres();
-});
+    enableScroll();
+};
 
 $(window).scroll(function() {
     if($(this).scrollTop() >= 100) {
@@ -31,3 +35,7 @@ $(window).scroll(function() {
         $("nav")[0].classList.remove("nav_active");
     }
 });
+document.getElementById("nav_logo").addEventListener("click",(e)=>{
+    e.preventDefault();
+    window.location.href = "index.html";
+})

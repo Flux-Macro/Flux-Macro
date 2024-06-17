@@ -18,10 +18,6 @@ html *::selection {
   color: #121212;
 }
 
-#hamburgermenu {
-  display: none;
-}
-
 body {
   height: 100%;
   width: 100dvw;
@@ -131,7 +127,6 @@ nav #nav_logo {
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
-  cursor: pointer;
   left: -10px;
   transform: translateY(-50%);
 }
@@ -198,103 +193,4 @@ nav .selected {
 
 .ignore-css {
   all: unset;
-}
-
-header {
-  height: 50vmin;
-  background: #191919;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-bottom: 1px solid #2a2a2a;
-  gap: 1vmin;
-}
-header svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-}
-header h1 {
-  font-size: 10vmin;
-  z-index: 20;
-  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
-}
-
-#section1 {
-  height: 65vmin;
-  width: 100dvw;
-  overflow: hidden;
-  border-bottom: 1px solid #2a2a2a;
-  text-align: right;
-  background: repeating-linear-gradient(45deg, #121212, #121212 5px, #191919 5px, #191919 10px);
-}
-#section1 h1 {
-  line-height: 1vmin;
-  width: 100%;
-}
-#section1 h2 {
-  line-height: 5vmin;
-  font-size: 2.35vmin;
-  color: #c2c2c2;
-  width: 100%;
-}
-#section1 .left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid #2a2a2a;
-}
-#section1 .right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #191919;
-}
-#section1 p {
-  margin-bottom: 1vmin;
-}
-#section1 .links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-  gap: 1vmin;
-}
-#section1 .links .link {
-  height: 5.5vmin;
-  aspect-ratio: 1/1;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: 0.35s;
-}
-#section1 .links .link:hover {
-  transform: scale(110%);
-  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
-}
-#section1 .links #github {
-  background-image: url("../assets/icons/gh.png");
-}
-#section1 .links #youtube {
-  background-image: url("../assets/icons/yt.webp");
-}
-#section1 #m1dnight_pfp {
-  height: 30vmin;
-  aspect-ratio: 1/1;
-  background-image: url("../assets/pfp/m1dnight.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 2.5vmin;
-  transition: 0.35s;
-  z-index: 99;
-  filter: drop-shadow(0 0 1.5vmin #2c2a45) drop-shadow(0 0 35vmin rgba(88, 156, 203, 0.4588235294)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.3137254902)) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.2078431373));
-}
-#section1 #m1dnight_pfp:hover {
-  transform: scale(110%) rotate(-5deg);
-  filter: drop-shadow(0 0 1.5vmin #2c2a45) drop-shadow(0 0 35vmin rgba(88, 156, 203, 0.4588235294)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.3137254902)) drop-shadow(0 0 5vmin rgba(88, 155, 203, 0.6274509804));
-}/*# sourceMappingURL=aboutus.css.map */
+}/*# sourceMappingURL=defaultStyle.css.map */

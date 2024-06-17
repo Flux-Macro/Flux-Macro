@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <link rel="icon" type="image/x-icon" href="assets/flux_icon.png">
-    <link rel="stylesheet" href="style/theme.css"/>
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="./style/defaultStyle_desktop.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./style/defaultStyle_mobile.css"/>
+    <script src="funcs.js"></script>
 </head>
 <style>
 button {
-    width: 100vmin;
+    width: 80vmin;
     padding: 2vmin;
     background: #232323;
     border-radius: 5vmin;
@@ -23,13 +25,59 @@ button:hover {
     transform: translateY(-1vmin);
     background: #589ccb;
     border: 1px solid #2f6185;
+    filter:
+        drop-shadow(0 0 30vmin #589ccb50)
+        drop-shadow(0 0 15vmin #589ccb30);
 }
+
 </style>
-<nav style="padding-right: .65vmin !important;">
+<div id="hamburgermenu">
+    <meta id="hm_isOpen?" content="false"/>
+</div>
+<nav id="nav">
     <div id="nav_logo"></div>
-    <a href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a style="margin-right: 3vmin;" href="comingsoon.html">Docs</a>
+    <a id="home" class="navitm" href="index.html">Home</a>
+    <a id="aboutus" class="navitm" href="aboutus.html">About Us</a>
+    <a id="docs" class="navitm" href="comingsoon.html">Docs</a>
+    <script>
+        const navitm=document.querySelectorAll(".navitm");
+        var navitms2=[];
+        if(window.screen.width<=600&&navitm){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            for(var i=0;i<navitm.length;i++){
+                navitms2.push({
+                    "txt":navitm[i].textContent,
+                    "elm":navitm[i],
+                });
+                navitm[i].remove();
+            }
+            console.log(navitms2);
+            // test code
+            // document.getElementById("nav").appendChild(navitms2[1].elm)
+            var hamburgermenu_icon=document.createElement("div");
+            hamburgermenu_icon.id="hamburgermenu_icon";
+            document.getElementById("hamburgermenu").setAttribute("style","transform:translateX(-75vmin);")
+            hamburgermenu_icon.onclick=(e)=>{
+                e.preventDefault();
+                if(document.getElementById("hm_isOpen?").getAttribute("content")==="true"){
+                    enableScroll();
+                }else{
+                    disableScroll();
+                }
+                document.getElementById("hamburgermenu").setAttribute("style",
+                    document.getElementById("hm_isOpen?").getAttribute("content")==="true" ? 
+                        "transform:translateX(-75vmin);opacity:0;" :
+                        "transform:translateX(0);opacity:1;")
+                document.getElementById("hm_isOpen?").setAttribute("content",
+                    document.getElementById("hm_isOpen?").getAttribute("content")==="true" ? 
+                    "false":"true")
+            }
+            document.getElementById("nav").appendChild(hamburgermenu_icon)
+            for(var i=0;i<navitms2.length;i++){
+                document.getElementById("hamburgermenu").appendChild(navitms2[i].elm);
+            }
+        }
+    </script>
 </nav>
 
 <div id="loading">
@@ -62,6 +110,7 @@ button:hover {
     <div class="ignore-css" style="
         height: 100dvh !important;
         width: 100dvw !important;
+        padding: 0vmin;
         position: fixed !important;
         top: 0% !important;
         left: 0% !important;

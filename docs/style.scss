@@ -1,4 +1,4 @@
-@import "theme";
+@import "defaultStyle_desktop";
 //------------------------------------------
 
 header {
@@ -281,6 +281,7 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex: 1;
             }
             .icon {
                 width: 85%;
@@ -301,6 +302,7 @@ header {
                 border: $outline;
                 flex: 1;
                 cursor: pointer;
+                font-size: 1.65vmin;
                 // position: absolute;
                 // bottom: 2vmin;
                 transition: .35s;

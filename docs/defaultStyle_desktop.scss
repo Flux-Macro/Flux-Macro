@@ -1,0 +1,190 @@
+@import "theme";
+//------------------------------------------
+
+html *{
+    margin:0;
+    padding:0;
+    position:relative;
+    box-sizing:border-box;
+    word-wrap: break-word;
+    text-wrap: wrap;
+    font-weight: 400;
+    font-family: 'Instrument Sans', sans-serif;
+    color: $txt1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &::selection{background: $active; color: $bg3;}
+}
+#hamburgermenu {
+    display: none;
+}
+body { 
+    height: 100%; 
+    width: 100dvw; 
+    background: $bg2;
+    overflow-x: hidden;
+    // padding-top: 8.5vmin;
+}
+
+.contentWrapper {
+    width: 100vmin;
+    height: calc(100% - 5vmin);
+    margin: auto;
+    padding: 5vmin;
+    z-index: 16;
+}
+
+.shade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+}
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-size: cover;
+    background-position: center;
+}  
+
+.text_wrapper {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin-bottom: 3vmin;
+        color: $txt1;
+        width: 100%;
+        $header-txt-size: 7.5vmin;
+        font-size: $header-txt-size;
+        line-height: calc($header-txt-size - .5vmin);
+        font-weight: bold;
+    }
+    p {
+        margin-bottom: 3vmin;
+        color: $txt2;
+        width: 100%;
+        font-size: 2.5vmin;
+        line-height: 3.5vmin;
+        font-weight: lighter;
+    }
+    hr {
+        border: $outline;
+        margin-bottom: 2vmin;
+        width: 100%;
+    }
+}
+
+.left {
+    position: absolute;
+    width: 50%;
+    left: 0%;
+    height: 100%;
+    top: 0%;
+}
+.right {
+    position: absolute;
+    width: 50%;
+    right: 0%;
+    height: 100%;
+    top: 0%;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8.5vmin;
+    width: 100dvw;
+    z-index: 999;
+    transition: .35s;
+    padding-right: 5vmin;
+    font-size: 2.35vmin;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 3vmin;
+    border-bottom: $outline;
+    border-width: 0px;
+    #nav_logo {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/flux_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        left: -10px;
+        transform: translateY(-50%);
+    }
+    a {
+        text-decoration: none;
+        transition: .35s;
+        display: block;
+    }
+    a:hover {
+        transform: scale(115%);
+    }
+    .selected {
+        font-weight: bold;
+    }
+}
+.nav_active {
+    background: #141414;
+}
+@keyframes loadingani {
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+#loading {
+    position: fixed;
+    height: 100dvh;
+    width: 100dvw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: $bg3;
+    z-index: 9997;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+    pointer-events: auto;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #loading_logo {
+        height: 30vmin;
+        aspect-ratio: 1 / 1;
+        background-image: url("../assets/flux_logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 9999;
+        transition: .35s;
+        animation: 3s infinite loadingani;
+        filter: 
+            drop-shadow(0 0 1.5vmin #ffffff25)
+            drop-shadow(0 0 30vmin $active)
+            drop-shadow(0 0 15vmin $active)
+            drop-shadow(0 0 5vmin #589ccb50);
+    }
+}
+.ignore-css{all:unset;}

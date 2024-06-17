@@ -1,0 +1,359 @@
+@import url("https://fonts.cdnfonts.com/css/instrument-sans");
+html * {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  font-weight: 400;
+  font-family: "Instrument Sans", sans-serif;
+  color: #f3f3f3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html *::selection {
+  background: #589ccb;
+  color: #121212;
+}
+
+body {
+  height: 100dvh;
+  width: 100dvw;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  background: #232323;
+  max-width: 100dvw;
+}
+
+.contentWrapper {
+  width: 100vmin;
+  height: calc(100% - 5vmin);
+  margin: auto;
+  padding: 5vmin;
+  z-index: 16;
+}
+
+.shade {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.bg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-position: center;
+}
+
+.text_wrapper h1 {
+  font-size: 12vmin;
+  margin-bottom: 3vmin;
+  width: 100%;
+  color: #f3f3f3;
+  font-weight: bold;
+}
+.text_wrapper p {
+  margin-bottom: 5vmin;
+  color: #d7d7d7;
+  width: 100%;
+  font-size: 4vmin;
+  line-height: 5.5vmin;
+  font-weight: lighter;
+}
+.text_wrapper hr {
+  border: 1px solid #2a2a2a;
+  margin-bottom: 3vmin;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 12.5vmin;
+  width: 100dvw;
+  z-index: 999;
+  transition: 0.35s;
+  padding-right: 5vmin;
+  font-size: 2.35vmin;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  gap: 3vmin;
+  border-bottom: 1px solid #2a2a2a;
+  border-width: 0px;
+}
+nav #nav_logo {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/flux_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -1vmin;
+  transform: translateY(-50%);
+}
+nav #hamburgermenu_icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/icons/hamburgermenu_icon.png");
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 8.5vmin;
+  transform: translateY(-50%);
+}
+
+#hamburgermenu {
+  position: fixed;
+  width: 75vmin;
+  height: 100dvh;
+  background: #121212;
+  top: 0;
+  left: 0;
+  z-index: 973;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 17.5vmin;
+  gap: 1vmin;
+  transition: 1s;
+}
+#hamburgermenu a {
+  width: 100%;
+  text-decoration: none;
+  font-size: 6vmin;
+  padding-left: 6.5vmin;
+}
+#hamburgermenu .selected {
+  border-left: 1.5vmin #f3f3f3 solid;
+  padding-left: 5vmin;
+}
+
+.nav_active {
+  background: #141414;
+}
+
+@keyframes loadingani {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#loading {
+  position: fixed;
+  height: 100dvh;
+  width: 100dvw;
+  background: #121212;
+  z-index: 9993;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  pointer-events: auto;
+}
+#loading svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#loading #loading_logo {
+  height: 30vmin;
+  aspect-ratio: 1/1;
+  background-image: url("../assets/flux_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  transition: 0.35s;
+  animation: 3s infinite loadingani;
+  filter: drop-shadow(0 0 1.5vmin rgba(255, 255, 255, 0.1450980392)) drop-shadow(0 0 30vmin #589ccb) drop-shadow(0 0 15vmin #589ccb) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.3137254902));
+}
+
+.ignore-css {
+  all: unset;
+}
+
+header {
+  height: 150vmin;
+  width: 100dvw;
+  background: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .right {
+  display: none;
+}
+header h1 {
+  font-size: 12vmin;
+}
+header button {
+  width: 100%;
+  padding: 3vmin 0;
+  background: #232323;
+  border: 1px solid #2a2a2a;
+  border-radius: 5vmin;
+  font-size: 3.65vmin;
+  transition: 0.35s;
+}
+header button:active {
+  background: #589ccb;
+  border: 1px solid #2f6185;
+  transform: scale(105%);
+}
+
+#section1 {
+  height: 150vmin;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #2a2a2a;
+  overflow: hidden;
+}
+#section1 .left {
+  display: none;
+}
+#section1 svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#section2 {
+  height: 150vmin;
+  width: 100dvw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #2a2a2a;
+  background-image: url("../assets/bg/topography.png");
+  background-size: cover;
+}
+#section2 .right {
+  display: none;
+}
+#section2 svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#section3 {
+  height: auto;
+  width: 100dvw;
+  overflow: hidden;
+  border-bottom: 1px solid #2a2a2a;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 3.5vmin;
+  background: #191919;
+  gap: 1vmin;
+}
+#section3 svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#section3 h1 {
+  font-size: 10vmin;
+  margin: 0;
+}
+#section3 #downloads_carousel {
+  height: calc(100% - 10vmin);
+  width: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vmin;
+  filter: drop-shadow(0 0 30vmin rgba(88, 156, 203, 0.1450980392)) drop-shadow(0 0 15vmin rgba(88, 156, 203, 0.1450980392)) drop-shadow(0 0 5vmin rgba(88, 156, 203, 0.0196078431));
+}
+#section3 #downloads_carousel .download {
+  width: 65vmin;
+  height: 85vmin;
+  background: #191919;
+  border: 1px solid #2a2a2a;
+  border-radius: 2vmin;
+  transition: 0.35s;
+  padding: 2vmin;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2vmin;
+}
+#section3 #downloads_carousel .download #source {
+  background-image: url("../assets/icons/gh.png");
+}
+#section3 #downloads_carousel .download h2 {
+  width: 100%;
+  text-align: left;
+  font-size: 5vmin;
+}
+#section3 #downloads_carousel .download p {
+  width: 100%;
+  text-align: left;
+  font-size: 3.5vmin;
+  color: #c2c2c2;
+}
+#section3 #downloads_carousel .download .iconWrapper {
+  flex: 1;
+  width: 100%;
+  height: 45vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section3 #downloads_carousel .download .icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#section3 #downloads_carousel .download a {
+  width: 100%;
+}
+#section3 #downloads_carousel .download button {
+  width: 100%;
+  padding: 1.5vmin 0;
+  border-radius: 1vmin;
+  background: #232323;
+  border: 1px solid #2a2a2a;
+  flex: 1;
+  font-size: 3.5vmin;
+  cursor: pointer;
+  transition: 0.35s;
+}/*# sourceMappingURL=style_mobile.css.map */

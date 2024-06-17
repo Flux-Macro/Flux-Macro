@@ -3,16 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css"/>
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="./style/style.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./style/style_mobile.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="assets/flux_icon.png">
+    <script src="funcs.js"></script>
     <title>Flux Macros</title>
 </head>
-<nav>
+<div id="hamburgermenu">
+    <meta id="hm_isOpen?" content="false"/>
+</div>
+<nav id="nav">
     <div id="nav_logo"></div>
-    <a class="selected" href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="comingsoon.html">Docs</a>
+    <a id="home" class="navitm selected" href="index.html">Home</a>
+    <a id="aboutus" class="navitm" href="aboutus.html">About Us</a>
+    <a id="docs" class="navitm" href="comingsoon.html">Docs</a>
+    <script>
+        const navitm=document.querySelectorAll(".navitm");
+        var navitms2=[];
+        if(window.screen.width<=600&&navitm){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            for(var i=0;i<navitm.length;i++){
+                navitms2.push({
+                    "txt":navitm[i].textContent,
+                    "elm":navitm[i],
+                });
+                navitm[i].remove();
+            }
+            console.log(navitms2);
+            // test code
+            // document.getElementById("nav").appendChild(navitms2[1].elm)
+            var hamburgermenu_icon=document.createElement("div");
+            hamburgermenu_icon.id="hamburgermenu_icon";
+            document.getElementById("hamburgermenu").setAttribute("style","transform:translateX(-75vmin);")
+            hamburgermenu_icon.onclick=(e)=>{
+                e.preventDefault();
+                if(document.getElementById("hm_isOpen?").getAttribute("content")==="true"){
+                    enableScroll();
+                }else{
+                    disableScroll();
+                }
+                document.getElementById("hamburgermenu").setAttribute("style",
+                    document.getElementById("hm_isOpen?").getAttribute("content")==="true" ? 
+                        "transform:translateX(-75vmin);opacity:0;" :
+                        "transform:translateX(0);opacity:1;")
+                document.getElementById("hm_isOpen?").setAttribute("content",
+                    document.getElementById("hm_isOpen?").getAttribute("content")==="true" ? 
+                    "false":"true")
+            }
+            document.getElementById("nav").appendChild(hamburgermenu_icon)
+            for(var i=0;i<navitms2.length;i++){
+                document.getElementById("hamburgermenu").appendChild(navitms2[i].elm);
+            }
+        }
+    </script>
 </nav>
 <div id="loading">
     <svg width="120%" height="120%" xmlns="http://www.w3.org/2000/svg">
@@ -133,6 +177,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
