@@ -21,6 +21,7 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\M1dnight\Downloads\Flux Macro\Flux Macro
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
 
 [C:/Users/M1dnight/Downloads/Flux Macro/Flux Macro/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
